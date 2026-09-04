@@ -10,7 +10,8 @@ It never persists vendor page bodies or excerpts.
 
 ## Local setup
 
-1. Create a PostgreSQL database and apply `migrations/0001_metadata_only.sql`.
+1. Create a PostgreSQL database. `pnpm start` applies the idempotent metadata
+   migration automatically before starting the service.
 2. Copy `.env.example` values into the runtime secret/environment manager.
 3. Run `pnpm install`, `pnpm build`, then `pnpm start`.
 4. Configure ERP Forward with the same service token, this service's internal
